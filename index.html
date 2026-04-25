@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>美丽烟台理工校园</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: "Microsoft YaHei", sans-serif;
+            background: #f4f4f4;
+            padding-bottom: 80px;
+        }
+        h1 {
+            text-align: center;
+            padding: 20px 0;
+            color: #2c3e50;
+        }
+        .container {
+            width: 92%;
+            max-width: 1100px;
+            margin: auto;
+        }
+        .title {
+            text-align: center;
+            margin: 40px 0 20px;
+            color: #333;
+        }
+
+        .grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        .item {
+            width: 31%;
+            background: white;
+            border-radius: 8px;
+            padding: 12px;
+            text-align: center;
+            margin-bottom: 22px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+        }
+        .item img {
+            width: 100%;
+            height: 170px;
+            object-fit: cover;
+            border-radius: 6px;
+            transition: 0.4s;
+        }
+        .item h3 {
+            margin-top: 10px;
+            font-size: 15px;
+            color: #2c3e50;
+        }
+        .grid1 .item:nth-child(1) img:hover,
+        .grid1 .item:nth-child(2) img:hover,
+        .grid1 .item:nth-child(3) img:hover {
+            transform: scale(1.5);
+        }
+
+        .grid1 .item:nth-child(1) h3:hover,
+        .grid1 .item:nth-child(2) h3:hover,
+        .grid1 .item:nth-child(3) h3:hover {
+            transform: rotate(45deg);
+        }
+  
+        .grid1 .item:nth-child(4) img:hover,
+        .grid1 .item:nth-child(5) img:hover,
+        .grid1 .item:nth-child(6) img:hover {
+            transform: skewX(30deg);
+        }
+
+       
+        .grid2 {
+            position: relative;
+            height: 750px;
+            margin-bottom: 60px;
+        }
+        .grid2 .item {
+            position: absolute;
+            width: 31%;
+            padding-bottom: 30px;
+        }
+        .grid2 .item:nth-child(1){top:0; left:0;}
+        .grid2 .item:nth-child(2){top:0; left:34.5%;}
+        .grid2 .item:nth-child(3){top:0; right:0;}
+
+        .grid2 .item:nth-child(4){top: 250px; left:0;}
+        .grid2 .item:nth-child(5){top: 250px; left:34.5%;}
+        .grid2 .item:nth-child(6){top: 250px; right:0;}
+
+        .grid2 .item:nth-child(7){top: 500px; left:0;}
+        .grid2 .item:nth-child(8){top: 500px; left:34.5%;}
+        .grid2 .item:nth-child(9){top: 500px; right:0;}
+
+      
+        footer {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 15px 0;
+            font-size: 14px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>美丽烟台理工校园</h1>
+    <div class="container">
+
+       
+        <h2 class="title">校园风光</h2>
+        <div class="grid grid1">
+            <div class="item">
+                <img src="images/school1.jpg">
+                <h3>图书馆</h3>
+            </div>
+            <div class="item">
+                <img src="images/school2.jpg">
+                <h3>教学楼</h3>
+            </div>
+            <div class="item">
+                <img src="images/school3.jpg">
+                <h3>操场</h3>
+            </div>
+            <div class="item">
+                <img src="images/school4.jpg">
+                <h3>湖畔</h3>
+            </div>
+            <div class="item">
+                <img src="images/school5.jpg">
+                <h3>林荫道</h3>
+            </div>
+            <div class="item">
+                <img src="images/school6.jpg">
+                <h3>宿舍楼</h3>
+            </div>
+            <div class="item">
+                <img src="images/school7.jpg">
+                <h3>食堂</h3>
+            </div>
+            <div class="item">
+                <img src="images/school8.jpg">
+                <h3>体育馆</h3>
+            </div>
+            <div class="item">
+                <img src="images/school9.jpg">
+                <h3>校门</h3>
+            </div>
+        </div>
+
+       
+        <h2 class="title">校园生活</h2>
+        <div class="grid grid2">
+            <div class="item">
+                <img src="images/life1.jpg">
+                <h3>课堂学习</h3>
+            </div>
+            <div class="item">
+                <img src="images/life2.jpg">
+                <h3>社团活动</h3>
+            </div>
+            <div class="item">
+                <img src="images/life3.jpg">
+                <h3>运动时刻</h3>
+            </div>
+            <div class="item">
+                <img src="images/life4.jpg">
+                <h3>自习时光</h3>
+            </div>
+            <div class="item">
+                <img src="images/life5.jpg">
+                <h3>课间交流</h3>
+            </div>
+            <div class="item">
+                <img src="images/life6.jpg">
+                <h3>比赛现场</h3>
+            </div>
+            <div class="item">
+                <img src="images/life7.jpg">
+                <h3>美食日常</h3>
+            </div>
+            <div class="item">
+                <img src="images/life8.jpg">
+                <h3>宿舍生活</h3>
+            </div>
+            <div class="item">
+                <img src="images/life9.jpg">
+                <h3>校园晚会</h3>
+            </div>
+        </div>
+
+        <h2 class="title">校园文化</h2>
+        <div class="grid grid3">
+            <div class="item">
+                <img src="images/culture1.jpg">
+                <h3>校徽文化</h3>
+            </div>
+            <div class="item">
+                <img src="images/culture2.jpg">
+                <h3>校训精神</h3>
+            </div>
+            <div class="item">
+                <img src="images/culture3.jpg">
+                <h3>校园活动</h3>
+            </div>
+            <div class="item">
+                <img src="images/culture4.jpg">
+                <h3>艺术节</h3>
+            </div>
+            <div class="item">
+                <img src="images/culture5.jpg">
+                <h3>科技节</h3>
+            </div>
+            <div class="item">
+                <img src="images/culture6.jpg">
+                <h3>读书节</h3>
+            </div>
+            <div class="item">
+                <img src="images/culture7.jpg">
+                <h3>志愿者活动</h3>
+            </div>
+            <div class="item">
+                <img src="images/culture8.jpg">
+                <h3>讲座交流</h3>
+            </div>
+            <div class="item">
+                <img src="images/culture9.jpg">
+                <h3>毕业季</h3>
+            </div>
+        </div>
+
+    </div>
+
+    <footer>
+        © 2026 烟台理工学院 | 姓名：徐海祥 | 学号：202405851109
+    </footer>
+</body>
+</html>
