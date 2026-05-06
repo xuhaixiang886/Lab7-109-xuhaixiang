@@ -2,7 +2,6 @@
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>美丽烟台理工校园</title>
     <style>
         * {
@@ -10,239 +9,180 @@
             padding: 0;
             box-sizing: border-box;
         }
+
         body {
             font-family: "Microsoft YaHei", sans-serif;
-            background: #f4f4f4;
-            padding-bottom: 80px;
-        }
-        h1 {
-            text-align: center;
-            padding: 20px 0;
-            color: #2c3e50;
-        }
-        .container {
-            width: 92%;
-            max-width: 1100px;
-            margin: auto;
-        }
-        .title {
-            text-align: center;
-            margin: 40px 0 20px;
-            color: #333;
+            background: #f5f7fa;
+            padding-bottom: 70px;
         }
 
-        .grid {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-        }
-        .item {
-            width: 31%;
-            background: white;
-            border-radius: 8px;
-            padding: 12px;
+        /* 标题 */
+        .header {
             text-align: center;
-            margin-bottom: 22px;
-            box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+            padding: 30px 0;
+            font-size: 32px;
+            color: #0066cc;
+            font-weight: bold;
         }
-        .item img {
+
+        /* 总九宫格容器 */
+        .container {
+            width: 1000px;
+            margin: 0 auto;
+        }
+
+        
+        .theme1 {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            background: #ffffff;
+            padding: 25px;
+            border-radius: 12px;
+            margin-bottom: 25px;
+            position: relative; /* 父相：相对定位 */
+        }
+        .theme1 h2 {
+            grid-column: 1 / -1;
+            text-align: center;
+            color: #0066cc;
+            font-size: 24px;
+            margin-bottom: 15px;
+        }
+        .theme1 .box {
+            height: 200px;
+            background: #e6f2ff;
+            border-radius: 8px;
+            overflow: hidden;
+            position: relative;
+        }
+        .theme1 img {
             width: 100%;
-            height: 170px;
+            height: 100%;
             object-fit: cover;
-            border-radius: 6px;
             transition: 0.4s;
+            position: absolute; /* 子绝：绝对定位 */
+            top: 0;
+            left: 0;
         }
-        .item h3 {
-            margin-top: 10px;
-            font-size: 15px;
-            color: #2c3e50;
-        }
-        .grid1 .item:nth-child(1) img:hover,
-        .grid1 .item:nth-child(2) img:hover,
-        .grid1 .item:nth-child(3) img:hover {
+
+        /* 第一行特效：图片放大1.5倍 / 标题旋转45° */
+        .theme1 .box:hover img {
             transform: scale(1.5);
         }
-
-        .grid1 .item:nth-child(1) h3:hover,
-        .grid1 .item:nth-child(2) h3:hover,
-        .grid1 .item:nth-child(3) h3:hover {
+        .theme1 h2:hover {
             transform: rotate(45deg);
-        }
-  
-        .grid1 .item:nth-child(4) img:hover,
-        .grid1 .item:nth-child(5) img:hover,
-        .grid1 .item:nth-child(6) img:hover {
-            transform: skewX(30deg);
+            transition: 0.4s;
         }
 
        
-        .grid2 {
-            position: relative;
-            height: 750px;
-            margin-bottom: 60px;
+        .theme2 {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            background: #ffffff;
+            padding: 25px;
+            border-radius: 12px;
+            margin-bottom: 25px;
         }
-        .grid2 .item {
-            position: absolute;
-            width: 31%;
-            padding-bottom: 30px;
+        .theme2 h2 {
+            grid-column: 1 / -1;
+            text-align: center;
+            color: #009966;
+            font-size: 24px;
+            margin-bottom: 15px;
         }
-        .grid2 .item:nth-child(1){top:0; left:0;}
-        .grid2 .item:nth-child(2){top:0; left:34.5%;}
-        .grid2 .item:nth-child(3){top:0; right:0;}
+        .theme2 .box {
+            height: 200px;
+            background: #f0fff4;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        .theme2 img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: 0.4s;
+        }
 
-        .grid2 .item:nth-child(4){top: 250px; left:0;}
-        .grid2 .item:nth-child(5){top: 250px; left:34.5%;}
-        .grid2 .item:nth-child(6){top: 250px; right:0;}
-
-        .grid2 .item:nth-child(7){top: 500px; left:0;}
-        .grid2 .item:nth-child(8){top: 500px; left:34.5%;}
-        .grid2 .item:nth-child(9){top: 500px; right:0;}
+        /* 第二行特效：图片倾斜30° */
+        .theme2 .box:hover img {
+            transform: skew(30deg);
+        }
 
       
+        .theme3 {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            background: #ffffff;
+            padding: 25px;
+            border-radius: 12px;
+        }
+        .theme3 h2 {
+            grid-column: 1 / -1;
+            text-align: center;
+            color: #cc6600;
+            font-size: 24px;
+            margin-bottom: 15px;
+        }
+        .theme3 .box {
+            height: 200px;
+            background: #fff9e6;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        .theme3 img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
         footer {
             position: fixed;
             bottom: 0;
             left: 0;
             width: 100%;
-            background: #2c3e50;
+            height: 60px;
+            background: #0066cc;
             color: white;
             text-align: center;
-            padding: 15px 0;
-            font-size: 14px;
+            line-height: 60px;
+            font-size: 16px;
         }
     </style>
 </head>
 
 <body>
-    <h1>美丽烟台理工校园</h1>
+    <h1 class="header">美丽烟台理工校园</h1>
+
     <div class="container">
-
-       
-        <h2 class="title">校园风光</h2>
-        <div class="grid grid1">
-            <div class="item">
-                <img src="images/school1.jpg">
-                <h3>图书馆</h3>
-            </div>
-            <div class="item">
-                <img src="images/school2.jpg">
-                <h3>教学楼</h3>
-            </div>
-            <div class="item">
-                <img src="images/school3.jpg">
-                <h3>操场</h3>
-            </div>
-            <div class="item">
-                <img src="images/school4.jpg">
-                <h3>湖畔</h3>
-            </div>
-            <div class="item">
-                <img src="images/school5.jpg">
-                <h3>林荫道</h3>
-            </div>
-            <div class="item">
-                <img src="images/school6.jpg">
-                <h3>宿舍楼</h3>
-            </div>
-            <div class="item">
-                <img src="images/school7.jpg">
-                <h3>食堂</h3>
-            </div>
-            <div class="item">
-                <img src="images/school8.jpg">
-                <h3>体育馆</h3>
-            </div>
-            <div class="item">
-                <img src="images/school9.jpg">
-                <h3>校门</h3>
-            </div>
+        <!-- 第一行：主题一（整行一个主题） -->
+        <div class="theme1">
+            <h2>主题一：校园教学区</h2>
+            <div class="box"><img src="images/jiaoxue1.jpg" alt="校园"></div>
+            <div class="box"><img src="images/jiaoxue2.jpg" alt="校园"></div>
+            <div class="box"><img src="images/jiaoxue3.jpg" alt="校园"></div>
         </div>
 
-       
-        <h2 class="title">校园生活</h2>
-        <div class="grid grid2">
-            <div class="item">
-                <img src="images/life1.jpg">
-                <h3>课堂学习</h3>
-            </div>
-            <div class="item">
-                <img src="images/life2.jpg">
-                <h3>社团活动</h3>
-            </div>
-            <div class="item">
-                <img src="images/life3.jpg">
-                <h3>运动时刻</h3>
-            </div>
-            <div class="item">
-                <img src="images/life4.jpg">
-                <h3>自习时光</h3>
-            </div>
-            <div class="item">
-                <img src="images/life5.jpg">
-                <h3>课间交流</h3>
-            </div>
-            <div class="item">
-                <img src="images/life6.jpg">
-                <h3>比赛现场</h3>
-            </div>
-            <div class="item">
-                <img src="images/life7.jpg">
-                <h3>美食日常</h3>
-            </div>
-            <div class="item">
-                <img src="images/life8.jpg">
-                <h3>宿舍生活</h3>
-            </div>
-            <div class="item">
-                <img src="images/life9.jpg">
-                <h3>校园晚会</h3>
-            </div>
+        <!-- 第二行：主题二（整行一个主题） -->
+        <div class="theme2">
+            <h2>主题二：校园生活区</h2>
+            <div class="box"><img src="images/xiaoyuan1.jpg" alt="校园"></div>
+            <div class="box"><img src="images/xiaoyuan2.jpg" alt="校园"></div>
+            <div class="box"><img src="images/xiaoyuan3.jpg" alt="校园"></div>
         </div>
 
-        <h2 class="title">校园文化</h2>
-        <div class="grid grid3">
-            <div class="item">
-                <img src="images/culture1.jpg">
-                <h3>校徽文化</h3>
-            </div>
-            <div class="item">
-                <img src="images/culture2.jpg">
-                <h3>校训精神</h3>
-            </div>
-            <div class="item">
-                <img src="images/culture3.jpg">
-                <h3>校园活动</h3>
-            </div>
-            <div class="item">
-                <img src="images/culture4.jpg">
-                <h3>艺术节</h3>
-            </div>
-            <div class="item">
-                <img src="images/culture5.jpg">
-                <h3>科技节</h3>
-            </div>
-            <div class="item">
-                <img src="images/culture6.jpg">
-                <h3>读书节</h3>
-            </div>
-            <div class="item">
-                <img src="images/culture7.jpg">
-                <h3>志愿者活动</h3>
-            </div>
-            <div class="item">
-                <img src="images/culture8.jpg">
-                <h3>讲座交流</h3>
-            </div>
-            <div class="item">
-                <img src="images/culture9.jpg">
-                <h3>毕业季</h3>
-            </div>
+        <!-- 第三行：主题三（整行一个主题） -->
+        <div class="theme3">
+            <h2>主题三：校园景观区</h2>
+            <div class="box"><img src="images/jingguan1.jpg" alt="校园"></div>
+            <div class="box"><img src="images/jingguan2.jpg" alt="校园"></div>
+            <div class="box"><img src="images/jingguan3.jpg" alt="校园"></div>
         </div>
-
     </div>
 
-    <footer>
-        © 2026 烟台理工学院 | 姓名：徐海祥 | 学号：202405851109
-    </footer>
+    <!-- 固定页脚 -->
+    <footer>烟台理工学院 © 校园风采展示</footer>
 </body>
 </html>
